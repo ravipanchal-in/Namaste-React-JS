@@ -3,23 +3,30 @@
 // const root = document.getElementById("root");
 // root.appendChild(heading);
 
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
 
-const heading1 = React.createElement(
-  "h1",
-  { key: "h1", className: "heading1" },
-  "Namste Everyone1!"
+//* jsx expression or React Element
+const heading = (
+  <h1 id="heading" key="h1">
+    I am heading
+  </h1>
 );
-const heading2 = React.createElement(
-  "h2",
-  { key: "h2", className: "heading2" },
-  "Namste Everyone2!"
-);
-const container = React.createElement("div", { className: "container" }, [
-  heading1,
-  heading2,
-]);
+
+//* React Component
+const Title = () => <h3>I am a Title</h3>;
+const Desc = () => <p>Lorem Ipsum is simply dummy text.</p>;
+
+const HeaderComponent = () => {
+  return (
+    <>
+      {heading}
+      {Title()}
+      <Desc />
+      {console.log("Hello World")}
+    </>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+root.render(<HeaderComponent />);
