@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  border-top: 5px solid #c41810;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 1rem #ccc;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: static;
+}
+header .logo img {
+  height: 70px;
+  width: auto;
+}
+header .navbar ul {
+  display: flex;
+}
+header .navbar ul li {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 1.5rem;
+}
