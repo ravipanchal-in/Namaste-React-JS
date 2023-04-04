@@ -1,7 +1,3 @@
-import React from "react";
-import "./main.css";
-import RestaurantCard from "../card/RestaurantCard";
-
 const restrautList = [
   {
     type: "restaurant",
@@ -497,126 +493,6 @@ const restrautList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "132460",
-      name: "Annapurna Andhra Mess",
-      uuid: "c6460418-904b-4371-9e04-0ce8b1b46cae",
-      city: "22",
-      area: "Dehradun",
-      totalRatingsString: "1000+ ratings",
-      cloudinaryImageId: "zw4qx2szsy9kbszk9n3d",
-      cuisines: ["South Indian", "Biryani", "North Indian"],
-      tags: [],
-      costForTwo: 20000,
-      costForTwoString: "â‚¹200 FOR TWO",
-      deliveryTime: 25,
-      minDeliveryTime: 25,
-      maxDeliveryTime: 25,
-      slaString: "25 MINS",
-      lastMileTravel: 1.399999976158142,
-      slugs: {
-        restaurant: "annapurna-andhra-mess-subhash-nagar-subhash-nagar",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address:
-        "keshav enclave sewla khurd chandrabani road behind uttranchal PG college",
-      locality: "Patel Nagar",
-      parentId: 33997,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
-          {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to â‚¹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to â‚¹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "1.3 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "132460",
-        deliveryTime: 25,
-        minDeliveryTime: 25,
-        maxDeliveryTime: 25,
-        lastMileTravel: 1.399999976158142,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: false,
-      avgRating: "4.0",
-      totalRatings: 1000,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
       id: "496677",
       name: "Uncle Ji Restaurant",
       uuid: "e652ab57-22c2-4226-b5ea-a5caa26ee0f8",
@@ -734,14 +610,4 @@ const restrautList = [
   },
 ];
 
-const Main = () => {
-  return (
-    <div className="main">
-      {restrautList.map((item) => (
-        <RestaurantCard {...item.data} />
-      ))}
-    </div>
-  );
-};
-
-export default Main;
+export default restrautList;

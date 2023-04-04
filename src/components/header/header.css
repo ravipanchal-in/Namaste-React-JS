@@ -1,8 +1,8 @@
 header {
   display: flex;
   border-top: 5px solid #c41810;
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 0 1rem #ccc;
+  border-bottom: 1px solid;
+  box-shadow: 0 0 1rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
