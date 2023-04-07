@@ -16,3 +16,10 @@ body {
   background-color: #454545;
   color: #ddd;
 }
+.navbar li a {
+  color: #ddd;
+  text-decoration: none;
+}
+.card a {
+  color: #ddd;
+}

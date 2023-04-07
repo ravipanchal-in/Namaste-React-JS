@@ -1,16 +1,16 @@
 import React from "react";
-import Main from "./src/components/main/Main";
 import Footer from "./src/components/footer/Footer";
 import Header from "./src/components/header/Header";
+import { Outlet } from "react-router-dom";
 
-const App = () => {
+const AppLayout = () => {
   return (
     <>
       <Header />
-      <Main />
+      <Outlet />
       <Footer />
     </>
   );
 };
 
-export default App;
+export default AppLayout;

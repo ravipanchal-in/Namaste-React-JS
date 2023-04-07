@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./main.css";
 import restrautList from "../../constants/RestaurantsList";
 import RestaurantCard from "../card/RestaurantCard";
-
-const filterData = (searchText, restaurants) => {
-  return restaurants.filter((item) =>
-    item.data.name.toLowerCase().includes(searchText.toLowerCase())
-  );
-};
+import { filterData } from "../../utils/helper";
+import useOnline from "../../hooks/useOnline";
 
 const Main = () => {
   const [searchText, setSearchText] = useState("");
@@ -27,13 +23,13 @@ const Main = () => {
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
-  // console.log("searchText----", searchText);
-  // console.log("allRestaurants----", allRestaurants);
-  // console.log("filteredRestaurants----", filteredRestaurants);
+  const isOnline = useOnline();
 
   //* Early Return
-  if (!allRestaurants) return null;
+  if (!isOnline)
+    return <h1>🔴 You are offline, Please check your internet connection </h1>;
 
+  if (!allRestaurants) return null;
   return allRestaurants?.length === 0 ? (
     <div>Loading</div>
   ) : (
@@ -59,9 +55,12 @@ const Main = () => {
           {filteredRestaurants.length === 0 ? (
             <h2>No restaurant match your filter!!</h2>
           ) : (
-            filteredRestaurants?.map((item) => (
-              <RestaurantCard key={item.data.id} {...item.data} />
-            ))
+            filteredRestaurants?.map(
+              (item) =>
+                item?.data?.veg === true && (
+                  <RestaurantCard key={item?.data?.id} {...item?.data} />
+                )
+            )
           )}
         </div>
       </div>
